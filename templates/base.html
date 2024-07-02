@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="static/css/simple.css" media="screen">
+	<link rel="stylesheet" href="static/css/custom-simple.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/x-icon" href="static/favicon.png">
+	<title>SimpleDesk</title>
+</head>
+<body>		
+	<header>
+		<nav>
+			<a href="{{ url_for('index') }}">Главная</a>
+			<a href="#">Контакты
+			<a href="#">Поддержка</a>
+			{% if user.is_authenticated %}
+				<a href="{{ url_for('logout') }}">Выйти</a>
+			{% else %}
+				<a href="{{ url_for('login') }}">Войти</a>
+			{% endif %}
+		</nav>
+	</header>
+	<main>
+		{% block content -%}
+
+		{% endblock -%}
+	</main>
+	<footer>
+		This is a test project for portfolio. 
+		<a href="#">Source code (Github)</a>
+		<br>
+		<a href="https://www.flaticon.com/free-icons/post-it" title="Post it icons">Post it icons created by Freepik - Flaticon</a>
+		<br>
+		<small>this.profile.never.exists - <a href="#">Instagram</a>, <a href="#">Telegram</a></small>
+	</footer>
+</body>
+</html>

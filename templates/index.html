@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{{ super() }}
+<section>
+	<h2><a href="#">{{ user.username }}</a></h2>
+	<p>Это моя первая заметка в этом сервисе! Оно выглядит дружелюбно! Lorem ipsum dolor sit, amet consectetur adipisicing, elit. Provident sint distinctio exercitationem esse laborum, quisquam consectetur quas est fugit consequatur reprehenderit reiciendis! Explicabo illo, earum.</p>
+	<small>Пользователь: <a href="#">admin</a>, 25.06.24 в 00:59 UTC</small>
+</section>
+<section>
+	<h2><a href="#">Идет как то медведь по лесу и говорит...</a></h2>
+	<p>Это моя первая заметка в этом сервисе! Оно выглядит дружелюбно! Lorem ipsum dolor sit, amet consectetur adipisicing, elit. Provident sint distinctio exercitationem esse laborum, quisquam consectetur quas est fugit consequatur reprehenderit reiciendis! Explicabo illo, earum.</p>
+	<small>Пользователь: <a href="#">admin</a>, 25.06.24 в 00:59 UTC</small>
+</section>
+{% endblock %}

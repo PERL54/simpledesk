@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{{ super() }}
+<center><h2>SimpleDesk - Регистрация</h2></center>
+<form autocomplete="off" method="POST" action="register">
+	<hr>
+
+	<p><aside><P>
+		Мы не храним Ваши пароли. Создавайте уникальный и сложный пароль, так вы обеспечите наилучшую защиту Ваших данных.</P>
+	</aside></p>
+
+	<p>
+		<label>Имя пользователя:</label>
+		<input type="text" 
+		name="username"
+		placeholder="YourName">
+
+		<label>Email:</label>
+		<input type="email" 
+		name="email"
+		placeholder="example@mail.com">
+
+		<label>Придумайте пароль:</label>
+		<input type="password" 
+		name="passwd"
+		placeholder="qwerty1234">
+
+		<label>Повторите пароль:</label>
+		<input type="password" 
+		name="pswd-repeat"
+		placeholder="qwerty1234">
+
+		<label>
+		<input type="checkbox" id="checkbox" alt="Accept tetm and conditions" name="accept-eula">
+	  		Принимаю <a href="#">политику обработки данных</a>
+	  	</label>
+		<label>
+		<input type="checkbox" id="checkbox" alt="Accept tetm and conditions" name="accept-ad">
+	  		Получать объявления о новых проектах и другую информацию
+	  	</label>
+	</p>
+	<p class="notice">Error occured!</p>
+	<button>Зарегистрироваться</button>
+</form>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{{ super() }}
+<center><h2>Войдите в свою учетную запись</h2></center>
+<form autocomplete="off" action="login" method="POST">
+<hr>
+<p>
+	<aside>
+		<p>Еще нет аккаунта на SimpleDesk? Пройдите <a href="{{ url_for('register') }}"> простую регистрацию!</a></p>
+	</aside>
+</p>
+
+<p>
+	<label>Эл. почта:</label>
+	<input type="email" 
+	name="email"
+	placeholder="example@simpledesk.com"
+	required>
+
+	<label>Пароль:</label>
+	<input type="password" 
+	name="passwd"
+	placeholder="qwerty1234"
+	required>
+
+
+	<label>
+	<input type="checkbox" id="checkbox" alt="dfsdf" name="remember_me">
+  		Запомнить вход с этого устройства
+  	</label>
+</p>
+<button>Войти</button>
+</form>
+
+	{% if error %}
+		<p class="error"><strong>Error: {{error}}</strong></p>
+	{% endif %}
+{% endblock %}
